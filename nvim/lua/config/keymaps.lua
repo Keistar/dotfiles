@@ -1,4 +1,4 @@
 local map = LazyVim.safe_keymap_set
 
--- jjでEsc
+-- jj to Esc
 map("i", "jj", "<Esc>")
