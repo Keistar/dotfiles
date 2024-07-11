@@ -8,4 +8,4 @@ target_4="${HOME}/.cache/${cmd}"
 base="$(pwd)/nvim_p"
 
 rm -rf ${target_1} ${target_2} ${target_3} ${target_4}
-ln -s ${base} ${target}
+ln -s ${base} ${target_1}
