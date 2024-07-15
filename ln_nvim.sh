@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 cmd="nvim"
 
 target_1="${HOME}/.config/${cmd}"
