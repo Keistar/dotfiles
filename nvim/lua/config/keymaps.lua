@@ -3,7 +3,6 @@ local vks = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- Increment/Decrement
--- vks("n", "+", "<C-a>")
 vks("n", "+", "<C-a>")
 vks("n", "-", "<C-x>")
 
