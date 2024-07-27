@@ -1,15 +1,19 @@
 local map = LazyVim.safe_keymap_set
+local vks = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- Increment/Decrement
-map("n", "+", "<C-a>")
-map("n", "-", "<C-x>")
+-- vks("n", "+", "<C-a>")
+vks("n", "+", "<C-a>")
+vks("n", "-", "<C-x>")
 
 -- Select all
-map("n", "<C-a>", "ggVG")
+vks("n", "<C-a>", "ggVG")
 
 -- jj to Esc
-map("i", "jj", "<Esc>")
+vks("i", "jj", "<Esc>")
+-- jk to Esc & Save
+vks("i", "jk", "<Esc><cmd>w<cr>")
 
 -- Save file
 map("n", "<Leader>w", ":update<Return>", opts)
