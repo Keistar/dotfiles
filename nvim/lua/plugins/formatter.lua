@@ -18,7 +18,7 @@ return {
         graphql = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
-        php = { "pcf" },
+        php = { "pcf", "pcfPersonal" },
       },
       formatters = {
         prettier = {
@@ -42,7 +42,17 @@ return {
           args = {
             "fix",
             "--using-cache=no",
-            '--rules={"@PSR12":true,"braces":{"position_after_functions_and_oop_constructs":"same"}}',
+            '--rules={"@PSR12":true}',
+            "$FILENAME",
+          },
+          stdin = false,
+        },
+        pcfPersonal = {
+          command = "php-cs-fixer",
+          args = {
+            "fix",
+            "--using-cache=no",
+            '--rules={"braces":{"position_after_functions_and_oop_constructs":"same"}}',
             "$FILENAME",
           },
           stdin = false,
