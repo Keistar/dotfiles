@@ -5,13 +5,43 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     opts = {
       formatters_by_ft = {
-        php = { "php-cs-fixer" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+        svelte = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        json = { "prettier" },
+        yaml = { "prettier" },
+        markdown = { "prettier" },
+        graphql = { "prettier" },
+        lua = { "stylua" },
+        python = { "isort", "black" },
+        php = { "pcf" },
       },
       formatters = {
-        ["php-cs-fixer"] = {
+        prettier = {
+          command = "prettier",
+          args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
+        },
+        stylua = {
+          command = "stylua",
+          args = { "-" },
+        },
+        isort = {
+          command = "isort",
+          args = { "-" },
+        },
+        black = {
+          command = "black",
+          args = { "-" },
+        },
+        pcf = {
           command = "php-cs-fixer",
           args = {
             "fix",
+            "--using-cache=no",
             "--rules=@PSR12",
             "$FILENAME",
           },
