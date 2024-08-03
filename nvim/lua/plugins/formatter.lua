@@ -42,7 +42,7 @@ return {
           args = {
             "fix",
             "--using-cache=no",
-            "--rules=@PSR12",
+            '--rules={"@PSR12":true,"braces":{"position_after_functions_and_oop_constructs":"same"}}',
             "$FILENAME",
           },
           stdin = false,
