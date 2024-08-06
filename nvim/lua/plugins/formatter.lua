@@ -1,3 +1,5 @@
+local php_cs_fixer_my_rules_file =
+  table.concat(vim.fn.readfile(vim.fn.expand("~/.config/nvim/php-cs-fixer-rules.json")), "")
 return {
   {
     "stevearc/conform.nvim",
@@ -52,7 +54,7 @@ return {
           args = {
             "fix",
             "--using-cache=no",
-            '--rules={"braces":{"position_after_functions_and_oop_constructs":"same"}}',
+            "--rules=" .. php_cs_fixer_my_rules_file,
             "$FILENAME",
           },
           stdin = false,
