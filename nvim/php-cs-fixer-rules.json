@@ -35,6 +35,6 @@
   "elseif": true,
   "function_typehint_space": true,
   "binary_operator_spaces": {
-    "default":"align_by_scope"
+    "default": "align_by_scope"
   }
 }
