@@ -1,0 +1,21 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+
+
+# Lazy.nvim のキャッシュ
+lazy-lock.json
+lazy.nvim/
+plugin/
+
+# Swap, Undo, Backup files
+*.swp
+*.swo
+*.swn
+*.un~
+*.bak
