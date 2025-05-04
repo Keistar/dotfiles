@@ -11,12 +11,22 @@ fi
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+ZSH_CUSTOM=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
+PLUGIN_DIR="$ZSH_CUSTOM/plugins"
+THEME_DIR="$ZSH_CUSTOM/themes"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
+if [ ! -d "$THEME_DIR/$(basename "$ZSH_THEME")" ]; then
+  echo "Theme '$ZSH_THEME' not found. Installing..."
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$THEME_DIR/$(basename "$ZSH_THEME")"
+  echo "Theme '$ZSH_THEME' installed successfully."
+fi
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -78,6 +88,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+ZSH_PLUGIN="zsh-syntax-highlighting"
+if [ ! -d "$PLUGIN_DIR/$ZSH_PLUGIN" ]; then
+  echo "Plugin '$ZSH_PLUGIN' not found. Installing..."
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$PLUGIN_DIR/$ZSH_PLUGIN"
+  echo "Plugin '$ZSH_PLUGIN' installed successfully."
+fi
+ZSH_PLUGIN="zsh-autosuggestions"
+if [ ! -d "$PLUGIN_DIR/$ZSH_PLUGIN" ]; then
+  echo "Plugin '$ZSH_PLUGIN' not found. Installing..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions.git "$PLUGIN_DIR/$ZSH_PLUGIN"
+  echo "Plugin '$ZSH_PLUGIN' installed successfully."
+fi
 plugins=(
     git
     zsh-syntax-highlighting
