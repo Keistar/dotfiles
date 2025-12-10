@@ -6,7 +6,7 @@ local opts = { silent = true }
 -- v: ビジュアルモード (Visual)
 -- i: 挿入モード (Insert)
 -- t: ターミナルモード (Terminal)
-
+--
 -- C-c でハイライトを消す
 map("n", "<C-c>", "<cmd>nohlsearch<CR>", opts)
 
@@ -21,3 +21,21 @@ map("n", "<leader>Q", "<cmd>wa<CR><cmd>qa<CR>", opts)
 
 map("i", "jj", "<esc>", { desc = "Back to Normal mode" })
 map("i", "jk", "<esc>:w<cr>", { desc = "Back to Normal mode (save file)" })
+
+-- LazyGit
+local Terminal = require("toggleterm.terminal").Terminal
+local lazygit = Terminal:new({
+  cmd = "lazygit",
+  direction = "float", -- フロート表示にする
+  hidden = true,       -- 起動直後は隠しておく
+  close_on_exit = true, -- lazygit終了時にターミナルも閉じる
+})
+local function LAZYGIT_TOGGLE()
+  lazygit:toggle()
+end
+vim.keymap.set(
+  "n",
+  "<leader>gg",
+  LAZYGIT_TOGGLE,
+  { desc = "Toggle LazyGit (ToggleTerm Float)" }
+)
