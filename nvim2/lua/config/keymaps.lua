@@ -16,10 +16,6 @@ map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
--- リーダーキー (スペースキー) を使った便利マッピング
--- バッファを保存
-map({ "n", "i", "v" }, "<leader>w", "<cmd>w<CR>", opts)
-
 -- 全てを保存して終了
 map("n", "<leader>Q", "<cmd>wa<CR><cmd>qa<CR>", opts)
 
