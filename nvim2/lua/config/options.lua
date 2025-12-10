@@ -1,7 +1,3 @@
--- leaderキーの設定
-vim.g.mapleader = " " -- スペースキーをleaderキーに設定
-vim.g.maplocalleader = " "
-
 -- 組み込み設定 (options)
 vim.opt.number = true        -- 行番号を表示
 vim.opt.relativenumber = true -- 相対行番号を表示 (カーソル行から見て相対的な番号)

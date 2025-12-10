@@ -7,8 +7,6 @@ local opts = { silent = true }
 -- i: 挿入モード (Insert)
 -- t: ターミナルモード (Terminal)
 
--- -- 💡 よく使う基本操作のキーマッピング -- --
-
 -- C-c でハイライトを消す
 map("n", "<C-c>", "<cmd>nohlsearch<CR>", opts)
 
@@ -24,3 +22,6 @@ map({ "n", "i", "v" }, "<leader>w", "<cmd>w<CR>", opts)
 
 -- 全てを保存して終了
 map("n", "<leader>Q", "<cmd>wa<CR><cmd>qa<CR>", opts)
+
+map("i", "jj", "<esc>", { desc = "Back to Normal mode" })
+map("i", "jk", "<esc>:w<cr>", { desc = "Back to Normal mode (save file)" })
