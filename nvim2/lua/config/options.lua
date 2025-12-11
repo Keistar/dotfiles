@@ -15,3 +15,20 @@ vim.opt.hlsearch = true      -- 検索結果をハイライト
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.backup = false
+
+-- 半角スペースを「·」、タブを「→」、全角空白を「□」で表示
+vim.opt.list = true
+vim.opt.listchars = {
+  space = "·",
+  tab = "→ ",
+  trail = "•",
+  extends = "›",
+  precedes = "‹",
+  nbsp = "␣",  -- ノーブレークスペース
+}
+
+-- setup toggleterm
+require("toggleterm").setup{
+    open_mapping = [[<c-\>]],
+    direction = 'float',
+}
