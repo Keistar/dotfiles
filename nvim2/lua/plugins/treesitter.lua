@@ -1,4 +1,3 @@
--- init.lua または plugins.lua のどこか
 return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate', -- プラグインのインストール時にパーサーを更新
