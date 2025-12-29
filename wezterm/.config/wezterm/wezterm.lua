@@ -18,4 +18,6 @@ config.macos_window_background_blur = 10
 -- font size
 config.font_size = 16
 
+config.enable_wayland = false
+
 return config
