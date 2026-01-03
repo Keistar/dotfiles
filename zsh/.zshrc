@@ -156,4 +156,4 @@ setopt hist_save_no_dups
 setopt hist_expand
 setopt inc_append_history
 
-### End of Zinit's installer chunk
+source ~/.sh_aliases
