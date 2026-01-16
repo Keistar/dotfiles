@@ -2,10 +2,11 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.automatically_reload_config = true
-config.color_scheme = "AdventureTime"
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 20
-config.font_size = 14
+-- config.color_scheme = "AdventureTime"
+config.window_background_opacity = 0.65
+config.macos_window_background_blur = 10
+config.font = wezterm.font("JetBrainsMono", { weight = "Medium", stretch = "Normal", style = "Normal" })
+config.font_size = 20
 
 -- タイトルバーを非表示
 config.window_decorations = "RESIZE"
@@ -29,9 +30,6 @@ config.window_background_gradient = {
 
 -- タブの追加ボタンを非表示
 config.show_new_tab_button_in_tab_bar = false
--- nightlyのみ使用可能
--- タブの閉じるボタンを非表示
-config.show_close_tab_button_in_tabs = false
 
 -- タブ同士の境界線を非表示
 config.colors = {
