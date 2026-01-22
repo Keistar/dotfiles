@@ -3,8 +3,8 @@ local config = wezterm.config_builder()
 
 config.automatically_reload_config = true
 -- config.color_scheme = "AdventureTime"
-config.window_background_opacity = 0.65
-config.macos_window_background_blur = 10
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 0
 config.font = wezterm.font("JetBrains Mono", { weight = "Medium", stretch = "Normal", style = "Normal" })
 config.font_size = 16
 
