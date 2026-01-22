@@ -5,8 +5,8 @@ config.automatically_reload_config = true
 -- config.color_scheme = "AdventureTime"
 config.window_background_opacity = 0.65
 config.macos_window_background_blur = 10
-config.font = wezterm.font("JetBrainsMono", { weight = "Medium", stretch = "Normal", style = "Normal" })
-config.font_size = 14
+config.font = wezterm.font("JetBrains Mono", { weight = "Medium", stretch = "Normal", style = "Normal" })
+config.font_size = 16
 
 -- タイトルバーを非表示
 config.window_decorations = "RESIZE"
