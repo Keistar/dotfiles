@@ -5,9 +5,9 @@ local act = wezterm.action
 config.automatically_reload_config = true
 -- config.color_scheme = "AdventureTime"
 config.window_background_opacity = 0.8
-config.macos_window_background_blur = 0
+config.macos_window_background_blur = 5
 config.font = wezterm.font("JetBrains Mono", { weight = "Medium", stretch = "Normal", style = "Normal" })
-config.font_size = 18
+config.font_size = 20
 
 config.keys = {
 	-- paste from the clipboard
