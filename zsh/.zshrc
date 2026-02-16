@@ -101,7 +101,13 @@ if [ ! -d "$PLUGIN_DIR/$ZSH_PLUGIN" ]; then
   echo "Plugin '$ZSH_PLUGIN' installed successfully."
 fi
 plugins=(
+    aws
+    aliases
+    golang
     git
+    brew
+    docker
+    docker-compose
     zsh-syntax-highlighting
     zsh-autosuggestions
 )
