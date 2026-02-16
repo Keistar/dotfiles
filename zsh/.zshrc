@@ -108,6 +108,8 @@ plugins=(
     brew
     docker
     docker-compose
+    you-should-use
+    zsh-bat
     zsh-syntax-highlighting
     zsh-autosuggestions
 )
