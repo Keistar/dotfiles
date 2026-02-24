@@ -6,7 +6,11 @@ config.automatically_reload_config = true
 -- config.color_scheme = "AdventureTime"
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 5
-config.font = wezterm.font("JetBrains Mono", { weight = "Medium", stretch = "Normal", style = "Normal" })
+config.font = wezterm.font_with_fallback({
+	{ family = "UDEV Gothic NF" },
+})
+config.line_height = 1.05
+config.cell_width = 1.04
 config.font_size = 20
 
 config.keys = {
